@@ -1,0 +1,36 @@
+/* src/index.css */
+
+/* Define the color palette using CSS variables */
+:root {
+  --bg-color: #f4f7f9; /* Light grey background */
+  --text-color: #333;
+  --primary-color: #007bff; /* A nice, sleek blue */
+  --secondary-color: #6c757d; /* Muted grey for subtitles */
+  --white-color: #ffffff;
+  --card-bg: #ffffff;
+  --footer-bg: #222629;
+  --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Basic reset and global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif; /* A modern, clean font */
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+.section-hidden {
+  opacity: 0;
+  transform: translateX(-50px); /* Starts off-screen to the left */
+}
+
+.section-visible {
+  opacity: 1;
+  transform: translateX(0); /* Slides into its normal position */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}

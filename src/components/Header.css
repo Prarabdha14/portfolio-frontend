@@ -1,0 +1,86 @@
+/* src/components/Header.css */
+
+.hero-section {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.hero-text {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  animation: fadeInDown 1s ease-out;
+}
+
+.hero-text h1 {
+  font-size: 4rem;
+  margin: 0;
+  color: var(--text-color);
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  margin: 0;
+  margin-top: -0.5rem;
+}
+
+/* New style for our animated text */
+.hero-animation {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  height: 60px; /* Gives it a fixed height to prevent layout shifts */
+}
+
+.hero-img {
+  width: 420px;
+  height: 420px;
+  border-radius: 20px;
+  object-fit: cover;
+  border: 5px solid var(--primary-color);
+  box-shadow: var(--shadow);
+  animation: fadeInRight 1s ease-out;
+}
+
+.hero-button {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.hero-button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
