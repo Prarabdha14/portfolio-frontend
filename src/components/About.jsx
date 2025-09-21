@@ -2,7 +2,7 @@
 
 import React from 'react';
 import './About.css';
-import { useInView } from 'react-intersection-observer'; // Import the hook
+import { useInView } from 'react-intersection-observer';
 
 const About = () => {
   const { ref, inView } = useInView({
@@ -12,7 +12,7 @@ const About = () => {
 
   return (
     <section id="about" className="about-section">
-      <div ref={ref} className={`about-content ${inView ? 'section-visible' : 'section-hidden'}`}>
+      <div ref={ref} className={`about-container ${inView ? 'section-visible' : 'section-hidden'}`}>
         <h2>About Me</h2>
         <p>
           I am a Full Stack Developer specializing in bridging the gap between intelligent AI models and dynamic user experiences. My passion lies in architecting complete solutions that bring complex, data-driven ideas to life.

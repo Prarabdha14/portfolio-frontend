@@ -5,56 +5,35 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 4rem;
-  max-width: 1100px;
-  width: 100%;
-}
-
-.hero-text {
-  max-width: 600px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1rem;
+  max-width: 800px;
   animation: fadeInDown 1s ease-out;
 }
 
-.hero-text h1 {
-  font-size: 4rem;
-  margin: 0;
+.hero-content h1 {
+  font-size: 4.5rem;
+  margin-bottom: 0.5rem;
   color: var(--text-color);
 }
 
 .hero-subtitle {
   font-size: 1.5rem;
   color: var(--secondary-color);
-  margin: 0;
-  margin-top: -0.5rem;
+  margin-bottom: 1rem;
 }
 
-/* New style for our animated text */
 .hero-animation {
   font-size: 1.2rem;
   font-weight: 600;
   color: var(--primary-color);
-  height: 60px; /* Gives it a fixed height to prevent layout shifts */
-}
-
-.hero-img {
-  width: 420px;
-  height: 420px;
-  border-radius: 20px;
-  object-fit: cover;
-  border: 5px solid var(--primary-color);
-  box-shadow: var(--shadow);
-  animation: fadeInRight 1s ease-out;
+  height: 60px;
+  margin-bottom: 1rem;
 }
 
 .hero-button {
@@ -74,13 +53,57 @@
   box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
 }
 
-/* Animations */
+.hero-socials {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.hero-socials a {
+  color: var(--secondary-color);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-socials a:hover {
+  color: var(--primary-color);
+  transform: scale(1.2);
+}
+
+.social-icon {
+  font-size: 2rem;
+}
+
+/* First background blob */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: -200px;
+  left: -200px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, blue, transparent 70%);
+  opacity: 0.15;
+  filter: blur(100px);
+  z-index: -1;
+}
+
+/* Second background blob */
+.hero-section::after {
+  content: '';
+  position: absolute;
+  bottom: -250px;
+  right: -250px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, #ff5722, transparent 70%);
+  opacity: 0.1;
+  filter: blur(100px);
+  z-index: -1;
+}
+
+/* Animation */
 @keyframes fadeInDown {
   from { opacity: 0; transform: translateY(-20px); }
   to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeInRight {
-  from { opacity: 0; transform: translateX(20px); }
-  to { opacity: 1; transform: translateX(0); }
 }

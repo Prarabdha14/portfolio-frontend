@@ -2,10 +2,10 @@
 
 /* Define the color palette using CSS variables */
 :root {
-  --bg-color: #f4f7f9; /* Light grey background */
+  --bg-color: #f4f7f9;
   --text-color: #333;
-  --primary-color: #007bff; /* A nice, sleek blue */
-  --secondary-color: #6c757d; /* Muted grey for subtitles */
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
   --white-color: #ffffff;
   --card-bg: #ffffff;
   --footer-bg: #222629;
@@ -20,17 +20,19 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif; /* A modern, clean font */
+  font-family: 'Poppins', sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
 }
+
+/* Animation styles for scroll effect */
 .section-hidden {
   opacity: 0;
-  transform: translateX(-50px); /* Starts off-screen to the left */
+  transform: translateX(-50px);
 }
 
 .section-visible {
   opacity: 1;
-  transform: translateX(0); /* Slides into its normal position */
+  transform: translateX(0);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
